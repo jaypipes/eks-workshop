@@ -1,12 +1,12 @@
 ---
-title: "Create an AWS KMS Custom Managed Key (CMK)"
+title: "Create an AWS KMS Customer Managed Key (CMK)"
 chapter: false
 weight: 32
 ---
 
 
 
-Create a CMK for the EKS cluster to use when encrypting your Kubernetes secrets:
+Create a Customer Managed Key (CMK) for the EKS cluster to use when encrypting your Kubernetes secrets:
 ```bash
 aws kms create-alias --alias-name alias/eksworkshop --target-key-id $(aws kms create-key --query KeyMetadata.Arn --output text)
 ```
